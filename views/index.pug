@@ -5,3 +5,33 @@ block content
         div(class="card shadow weatherCard")
             div(class="h2 text-center card-header") WEATHER APP 
                 i(class="fas fa-cloud")
+            div(class="card-body")
+                div("card-text")
+                    form( method="POST" action="/")
+                        div(class="input-group mb-3")
+                            input(type="text" class="form-control" placeholder="Enter Location" aria-label="location" aria-describedby="location" name="location")
+                            button( type="submit" class="input-group-text" id="location")
+                                i(class="fas fa-search-location")
+                div(class="card-text")
+                    i(class="fas fa-map-marked-alt") 
+                    |  #{results.location.name}
+                div(class="card-text") 
+                    i(class="fas fa-thumbtack") 
+                    |  #{results.location.region}
+                div(class="card-text")
+                    i(class="fas fa-globe")
+                    |  #{results.location.country}
+                div(class="card-text") Latitude #{results.location.lat}
+                div(class="card-text") Longitude #{results.location.lon}
+                div(class="card-text") Temp Celsius #{results.current.temp_c}
+                div(class="card-text") Temp Fahrenheit #{results.current.temp_f}
+                div(class="card-text") Condition #{results.current.condition.text}
+                div(class="card-text") Humidity #{results.current.humidity}
+                div(class="card-text") Wind Direction #{results.current.wind_dir}
+
+
+
+                
+
+
+            

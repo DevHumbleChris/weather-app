@@ -13,3 +13,8 @@ body {
     width: 30rem;
     margin-top: 70px;
 }
+
+.flexContainer {
+    display: flex;
+    flex-direction: row;
+}

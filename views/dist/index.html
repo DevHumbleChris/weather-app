@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>WEATHER APP</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.5.0/css/all.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <div class="container mt-2">
+      <div class="card shadow weatherCard">
+        <div class="h2 text-center card-header">WEATHER APP <i class="fas fa-cloud"></i></div>
+        <div class="card-body">
+          <div card-text="card-text">
+            <form method="GET" action="/">
+              <div class="input-group mb-3">
+                <input class="form-control" type="text" placeholder="Enter Location" aria-label="location" aria-describedby="location"/><span class="input-group-text" id="location"><i class="fas fa-search-location"></i></span>
+              </div>
+            </form>
+          </div>
+          <div class="card-text">Location</div>
+          <div class="card-text">Country</div>
+          <div class="card-text">Latitude</div>
+          <div class="card-text">Longitude</div>
+          <div class="card-text">Temp Celsius</div>
+          <div class="card-text">Temp Freheiht</div>
+          <div class="card-text">Condition</div>
+          <div class="card-text">Humidity</div>
+          <div class="card-text">Wind Direction</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
