@@ -16,11 +16,20 @@ module.exports = {
     indexPost: async (req, res) => {
         let queryString = req.body.location
 
-        response = await axios.get(`${URL}${queryString}`)
-        responseData = response.data
+        
+        try{
+            response = await axios.get(`${URL}${queryString}`)
+            responseData = response.data
 
-        res.render("index", {
-            results: responseData
-        })
+            res.render("index", {
+                results: responseData
+            })
+
+        }catch(err){
+            res.render("index", {
+                results: "error"
+            })
+        }
+
     }
 }

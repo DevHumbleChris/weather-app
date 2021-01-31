@@ -3,7 +3,7 @@ extends layouts
 block content
     div(class="container mt-2")
         div(class="card shadow weatherCard")
-            div(class="h2 text-center card-header") WEATHER APP 
+            div(class="h2 text-center card-header textHeader") WEATHER APP 
                 i(class="fas fa-cloud")
             div(class="card-body")
                 div("card-text")
@@ -12,22 +12,45 @@ block content
                             input(type="text" class="form-control" placeholder="Enter Location" aria-label="location" aria-describedby="location" name="location")
                             button( type="submit" class="input-group-text" id="location")
                                 i(class="fas fa-search-location")
-                div(class="card-text")
-                    i(class="fas fa-map-marked-alt") 
-                    |  #{results.location.name}
-                div(class="card-text") 
-                    i(class="fas fa-thumbtack") 
-                    |  #{results.location.region}
-                div(class="card-text")
-                    i(class="fas fa-globe")
-                    |  #{results.location.country}
-                div(class="card-text") Latitude #{results.location.lat}
-                div(class="card-text") Longitude #{results.location.lon}
-                div(class="card-text") Temp Celsius #{results.current.temp_c}
-                div(class="card-text") Temp Fahrenheit #{results.current.temp_f}
-                div(class="card-text") Condition #{results.current.condition.text}
-                div(class="card-text") Humidity #{results.current.humidity}
-                div(class="card-text") Wind Direction #{results.current.wind_dir}
+                if results === "error"
+                    div(class="card-body")
+                        div(class="card-text text-results") Sorry Love, Couldn't Find What You Are Looking For.
+                        div(class="card-text emojiReact text-center") 😭🤦‍♂️
+                else
+                    div(class="flexContainer p-item")
+                        div(class="card-text flex-item")
+                            span(class="textInfo") Location Name: 
+                                span(class="text-results") #{results.location.name}
+                        div(class="card-text flex-Right flex-item")
+                            span(class="textInfo") Region: 
+                                span(class="text-results") #{results.location.region}
+                    div(class="card-text p-item")
+                        span(class="textInfo") Country: 
+                            span(class="text-results") #{results.location.country}
+                    div(class="flexContainer p-item")
+                        div(class="card-text flex-item") 
+                            span(class="textInfo") Latitude: 
+                                span(class="text-results") #{results.location.lat}
+                        div(class="card-text flex-item")
+                            span(class="textInfo") Longitude: 
+                                span(class="text-results")  #{results.location.lon}
+                    div(class="flexContainer p-item")
+                        div(class="card-text flex-item")
+                            span(class="textInfo") Temp Celsius: 
+                                span(class="text-results") #{results.current.temp_c}
+                        div(class="card-text flex-item") 
+                            span(class="textInfo") Temp Fahrenheit: 
+                                span(class="text-results") #{results.current.temp_f}
+                    div(class="flexContainer p-item")
+                        div(class="card-text flex-item") 
+                            span(class="textInfo") Condition: 
+                                span(class="text-results") #{results.current.condition.text}
+                        div(class="card-text flex-item") 
+                            span(class="textInfo") Humidity: 
+                                span(class="text-results") #{results.current.humidity}
+                    div(class="card-text p-item") 
+                        span(class="textInfo") Wind Direction: 
+                            span(class="text-results") #{results.current.wind_dir}
 
 
 

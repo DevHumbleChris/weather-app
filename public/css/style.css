@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Amarante&family=Chela+One&family=Finger+Paint&family=Potta+One&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -16,5 +17,24 @@ body {
 
 .flexContainer {
     display: flex;
-    flex-direction: row;
+    flex-wrap: row-wrap;
+}
+.flex-item {
+    width: 100%;
+}
+.p-item{
+    padding: 7px;
+}
+.textInfo {
+    font-family: 'Potta One', cursive;
+}
+.text-results, input[type=text] {
+    font-family: 'Finger Paint', cursive;
+    color: #0b88fc;
+}
+.textHeader {
+    font-family: 'Chela One', cursive;
+}
+.emojiReact {
+    font-size: 70px;
 }
